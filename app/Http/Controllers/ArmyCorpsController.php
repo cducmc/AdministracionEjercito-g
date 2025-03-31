@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ArmyCorp;
 use App\Models\ArmyCorps;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,7 @@ class ArmyCorpsController extends Controller
         ]);
 
         // Crear el nuevo Cuerpo de Ejército
-        ArmyCorps::create([
+        ArmyCorp::create([
             'denomination' => $request->denomination,
         ]);
 

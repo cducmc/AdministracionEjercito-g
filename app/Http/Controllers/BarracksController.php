@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Barrack;
 use App\Models\Barracks;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,7 @@ class BarracksController extends Controller
             'location' => 'required|string|max:10',
         ]);
 
-        Barracks::create([
+        Barrack::create([
             'name' => $request->name,
             'location' => $request->location,
         ]);

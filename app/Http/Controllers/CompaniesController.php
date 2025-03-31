@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Companie;
 use App\Models\Companies;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,7 @@ class CompaniesController extends Controller
             'primary_activity' => 'required|string|max:20',
         ]);
 
-        Companies::create([
+        Companie::create([
 
             'primary_activity' => $request->primary_activity,
         ]);
